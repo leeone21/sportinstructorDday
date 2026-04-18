@@ -8,19 +8,15 @@
 </head>
 <body>
   <div class="container">
+
     <header>
-      <h1>🏋️ 스포츠지도사 필기시험</h1>
+      <p class="title">🏆 스포츠지도사 필기시험</p>
       <p class="subtitle">D-Day 카운트다운</p>
     </header>
 
-    <!-- 1. 카운트다운 -->
-    <section class="timer-section">
+    <!-- 메인 카드: 타이머 + 배지 -->
+    <div class="card main-card">
       <div class="timer">
-        <div class="time-block">
-          <span id="days" class="time-num">000</span>
-          <span class="time-label">일</span>
-        </div>
-        <span class="colon">:</span>
         <div class="time-block">
           <span id="hours" class="time-num">00</span>
           <span class="time-label">시간</span>
@@ -36,26 +32,27 @@
           <span class="time-label">초</span>
         </div>
       </div>
-    </section>
 
-    <!-- 2. D-363 -->
-    <section class="dday-section">
-      <p id="dday-label" class="dday-text">D-000</p>
-    </section>
+      <div class="badge-wrap">
+        <span id="dday-badge" class="badge">D-000</span>
+        <p id="remaining-text" class="remaining">000일 00시간 00분 00초 남았습니다</p>
+      </div>
+    </div>
 
-    <!-- 3. 날짜 정보 -->
-    <section class="info-section">
+    <!-- 정보 카드 -->
+    <div class="card info-card">
       <div class="info-row">
-        <span class="info-key">예상 시험일</span>
+        <span class="info-label">시험일</span>
         <span class="info-val">2027년 4월 17일 (토)</span>
       </div>
+      <div class="divider"></div>
       <div class="info-row">
-        <span class="info-key">오늘</span>
+        <span class="info-label">오늘</span>
         <span id="today" class="info-val"></span>
       </div>
-    </section>
-  </div>
+    </div>
 
+  </div>
   <script src="script.js"></script>
 </body>
 </html>

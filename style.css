@@ -5,134 +5,147 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #F4F6F9;
   min-height: 100vh;
-  color: #eee;
+  color: #1A2535;
 }
 
 .container {
-  max-width: 700px;
+  max-width: 480px;
   margin: 0 auto;
-  padding: 20px 16px 40px;
+  padding: 40px 20px 60px;
 }
 
+/* 헤더 */
 header {
   text-align: center;
-  padding: 40px 0 20px;
+  margin-bottom: 24px;
 }
 
-header h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #e94560;
-  letter-spacing: -0.5px;
+.title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #3A4A5E;
+  letter-spacing: 0.2px;
 }
 
 .subtitle {
-  margin-top: 6px;
-  font-size: 1rem;
-  color: #a8b2d8;
+  font-size: 11px;
+  color: #8A99AA;
+  margin-top: 4px;
 }
 
-section {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 28px 24px;
-  margin-bottom: 20px;
-  backdrop-filter: blur(10px);
+/* 카드 공통 */
+.card {
+  background: #FFFFFF;
+  border: 0.5px solid #DDE2EA;
+  border-radius: 14px;
+  margin-bottom: 12px;
 }
 
-/* 1. 카운트다운 */
+/* 메인 카드 */
+.main-card {
+  padding: 32px 24px 24px;
+}
+
+/* 타이머 */
 .timer {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 28px;
 }
 
 .time-block {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 18px 14px;
   min-width: 80px;
 }
 
 .time-num {
-  font-size: 2.4rem;
-  font-weight: 700;
-  color: #fff;
+  font-size: 42px;
+  font-weight: 500;
+  color: #009E7A;
   font-variant-numeric: tabular-nums;
-  letter-spacing: 1px;
   line-height: 1;
+  letter-spacing: -1px;
 }
 
 .time-label {
-  font-size: 0.75rem;
-  color: #a8b2d8;
-  margin-top: 8px;
-  letter-spacing: 1px;
+  font-size: 11px;
+  color: #8A99AA;
+  margin-top: 6px;
 }
 
 .colon {
-  font-size: 1.8rem;
-  color: #a8b2d8;
-  font-weight: 700;
-  padding-bottom: 20px;
+  font-size: 36px;
+  color: #C5CDD8;
+  font-weight: 400;
+  line-height: 1;
+  padding-top: 2px;
   user-select: none;
 }
 
-/* 2. D-Day 텍스트 */
-.dday-section {
-  text-align: center;
-  padding: 20px 24px;
+/* D-N 배지 */
+.badge-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
-.dday-text {
-  font-size: clamp(4rem, 20vw, 8rem);
-  font-weight: 900;
-  color: #e94560;
-  letter-spacing: -4px;
-  text-shadow: 0 0 40px rgba(233, 69, 96, 0.5);
+.badge {
+  display: inline-block;
+  background: #EAF7F3;
+  color: #007A5E;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 5px 16px;
+  border-radius: 20px;
   font-variant-numeric: tabular-nums;
 }
 
-/* 3. 날짜 정보 */
-.info-section {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.remaining {
+  font-size: 11px;
+  color: #A0AABB;
+  font-variant-numeric: tabular-nums;
+}
+
+/* 정보 카드 */
+.info-card {
+  padding: 0 20px;
+  border-radius: 10px;
 }
 
 .info-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 14px 0;
 }
 
-.info-key {
-  color: #a8b2d8;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.divider {
+  height: 0.5px;
+  background: #DDE2EA;
+}
+
+.info-label {
+  font-size: 12px;
+  color: #8A99AA;
 }
 
 .info-val {
-  font-weight: 600;
-  color: #eee;
-  font-size: 0.95rem;
+  font-size: 13px;
+  font-weight: 500;
+  color: #1A2535;
 }
 
-@media (max-width: 480px) {
-  header h1 { font-size: 1.5rem; }
-  .time-num { font-size: 1.7rem; }
-  .time-block { min-width: 60px; padding: 14px 8px; }
-  .colon { font-size: 1.3rem; }
-  .dday-text { font-size: 2.5rem; }
+/* 모바일 */
+@media (max-width: 360px) {
+  .time-num { font-size: 32px; }
+  .time-block { min-width: 60px; }
+  .colon { font-size: 28px; }
 }
