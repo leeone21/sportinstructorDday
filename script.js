@@ -1,4 +1,4 @@
-const EXAM_DATE = new Date('2027-04-17T00:00:00+09:00');
+const EXAM_DATE = new Date(2027, 3, 17); // April 17, 2027 (month is 0-indexed)
 
 const ddayLabel = document.getElementById('dday-label');
 const daysEl = document.getElementById('days');
