@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>스포츠지도사 필기시험 D-Day 계산기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏋️ 스포츠지도사 필기시험</h1>
+      <p class="subtitle">D-Day 계산기</p>
+    </header>
+
+    <section class="exam-section">
+      <h2>시험일 선택</h2>
+      <div class="input-group">
+        <label for="examDate">시험 날짜</label>
+        <input type="date" id="examDate" />
+      </div>
+      <div class="input-group">
+        <label for="examName">시험명 (선택)</label>
+        <input type="text" id="examName" placeholder="예: 2025 생활스포츠지도사 2급" />
+      </div>
+      <button id="addBtn" class="btn-primary">추가하기</button>
+    </section>
+
+    <section class="dday-section">
+      <h2>D-Day 현황</h2>
+      <div id="ddayList" class="dday-list">
+        <p class="empty-msg">등록된 시험이 없습니다.</p>
+      </div>
+    </section>
+
+    <section class="preset-section">
+      <h2>자주 쓰는 시험 종류</h2>
+      <div class="preset-list">
+        <button class="preset-btn" data-name="생활스포츠지도사 1급 필기">생활스포츠지도사 1급</button>
+        <button class="preset-btn" data-name="생활스포츠지도사 2급 필기">생활스포츠지도사 2급</button>
+        <button class="preset-btn" data-name="전문스포츠지도사 1급 필기">전문스포츠지도사 1급</button>
+        <button class="preset-btn" data-name="전문스포츠지도사 2급 필기">전문스포츠지도사 2급</button>
+        <button class="preset-btn" data-name="장애인스포츠지도사 필기">장애인스포츠지도사</button>
+        <button class="preset-btn" data-name="노인스포츠지도사 필기">노인스포츠지도사</button>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>오늘: <span id="today"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
