@@ -7,29 +7,48 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="countdown-wrap">
-    <p class="exam-label">스포츠지도사 필기시험까지</p>
-    <h1 id="dday" class="dday">D-000</h1>
+  <div class="container">
+    <header>
+      <h1>🏋️ 스포츠지도사 필기시험</h1>
+      <p class="subtitle">D-Day 카운트다운</p>
+    </header>
 
-    <div class="timer">
-      <div class="time-block">
-        <span id="hours" class="time-num">00</span>
-        <span class="time-label">시간</span>
+    <section class="dday-section">
+      <h2 id="dday-label">계산 중...</h2>
+      <div class="timer">
+        <div class="time-block">
+          <span id="days" class="time-num">000</span>
+          <span class="time-label">일</span>
+        </div>
+        <span class="colon">:</span>
+        <div class="time-block">
+          <span id="hours" class="time-num">00</span>
+          <span class="time-label">시간</span>
+        </div>
+        <span class="colon">:</span>
+        <div class="time-block">
+          <span id="minutes" class="time-num">00</span>
+          <span class="time-label">분</span>
+        </div>
+        <span class="colon">:</span>
+        <div class="time-block">
+          <span id="seconds" class="time-num">00</span>
+          <span class="time-label">초</span>
+        </div>
       </div>
-      <span class="colon">:</span>
-      <div class="time-block">
-        <span id="minutes" class="time-num">00</span>
-        <span class="time-label">분</span>
-      </div>
-      <span class="colon">:</span>
-      <div class="time-block">
-        <span id="seconds" class="time-num">00</span>
-        <span class="time-label">초</span>
-      </div>
-    </div>
+    </section>
 
-    <p class="exam-date">시험일: 2027년 4월 17일 (토)</p>
-  </main>
+    <section class="info-section">
+      <div class="info-row">
+        <span class="info-key">시험일</span>
+        <span class="info-val">2027년 4월 17일 (토)</span>
+      </div>
+      <div class="info-row">
+        <span class="info-key">오늘</span>
+        <span id="today" class="info-val"></span>
+      </div>
+    </section>
+  </div>
 
   <script src="script.js"></script>
 </body>
