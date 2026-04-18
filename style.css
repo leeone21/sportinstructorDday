@@ -44,17 +44,7 @@ section {
   backdrop-filter: blur(10px);
 }
 
-/* D-Day Section */
-.dday-section h2 {
-  font-size: 2.8rem;
-  font-weight: 900;
-  color: #e94560;
-  text-align: center;
-  margin-bottom: 28px;
-  letter-spacing: -1px;
-  text-shadow: 0 0 30px rgba(233, 69, 96, 0.35);
-}
-
+/* 1. 카운트다운 */
 .timer {
   display: flex;
   align-items: center;
@@ -70,12 +60,12 @@ section {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
-  padding: 16px 14px;
-  min-width: 76px;
+  padding: 18px 14px;
+  min-width: 80px;
 }
 
 .time-num {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: #fff;
   font-variant-numeric: tabular-nums;
@@ -86,19 +76,34 @@ section {
 .time-label {
   font-size: 0.75rem;
   color: #a8b2d8;
-  margin-top: 6px;
+  margin-top: 8px;
   letter-spacing: 1px;
 }
 
 .colon {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #a8b2d8;
   font-weight: 700;
-  padding-bottom: 18px;
+  padding-bottom: 20px;
   user-select: none;
 }
 
-/* Info Section */
+/* 2. D-Day 텍스트 */
+.dday-section {
+  text-align: center;
+  padding: 20px 24px;
+}
+
+.dday-text {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #e94560;
+  letter-spacing: -2px;
+  text-shadow: 0 0 30px rgba(233, 69, 96, 0.4);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 3. 날짜 정보 */
 .info-section {
   display: flex;
   flex-direction: column;
@@ -109,7 +114,6 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.95rem;
 }
 
 .info-key {
@@ -122,12 +126,13 @@ section {
 .info-val {
   font-weight: 600;
   color: #eee;
+  font-size: 0.95rem;
 }
 
 @media (max-width: 480px) {
   header h1 { font-size: 1.5rem; }
-  .dday-section h2 { font-size: 2rem; }
-  .time-num { font-size: 1.5rem; }
-  .time-block { min-width: 58px; padding: 12px 8px; }
-  .colon { font-size: 1.2rem; }
+  .time-num { font-size: 1.7rem; }
+  .time-block { min-width: 60px; padding: 14px 8px; }
+  .colon { font-size: 1.3rem; }
+  .dday-text { font-size: 2.5rem; }
 }
