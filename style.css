@@ -41,7 +41,8 @@ header {
   background: #FFFFFF;
   border: 0.5px solid #DDE2EA;
   border-radius: 14px;
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
+  max-width: 480px;
 }
 
 /* 메인 카드 */
@@ -66,7 +67,7 @@ header {
 }
 
 .time-num {
-  font-size: 42px;
+  font-size: 72px;
   font-weight: 500;
   color: #009E7A;
   font-variant-numeric: tabular-nums;
@@ -81,7 +82,7 @@ header {
 }
 
 .colon {
-  font-size: 36px;
+  font-size: 60px;
   color: #C5CDD8;
   font-weight: 400;
   line-height: 1;
