@@ -4,234 +4,95 @@
   padding: 0;
 }
 
-body {
+html, body {
+  height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  min-height: 100vh;
   color: #eee;
-  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.container {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px 16px;
-}
-
-/* Header */
-header {
+.countdown-wrap {
   text-align: center;
-  padding: 40px 0 20px;
-}
-
-header h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #e94560;
-  letter-spacing: -0.5px;
-}
-
-.subtitle {
-  margin-top: 6px;
-  font-size: 1rem;
-  color: #a8b2d8;
-}
-
-/* Sections */
-section {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
   padding: 24px;
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 720px;
+}
+
+.exam-label {
+  font-size: 1.1rem;
+  color: #a8b2d8;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.dday {
+  font-size: clamp(4rem, 18vw, 10rem);
+  font-weight: 900;
+  color: #e94560;
+  letter-spacing: -4px;
+  line-height: 1;
+  text-shadow: 0 0 40px rgba(233, 69, 96, 0.4);
+  margin-bottom: 32px;
+  font-variant-numeric: tabular-nums;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.time-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 16px 18px;
+  min-width: 90px;
   backdrop-filter: blur(10px);
 }
 
-section h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #a8b2d8;
-  margin-bottom: 16px;
-  text-transform: uppercase;
+.time-num {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
   letter-spacing: 1px;
 }
 
-/* Input */
-.input-group {
-  margin-bottom: 14px;
-}
-
-.input-group label {
-  display: block;
-  font-size: 0.85rem;
+.time-label {
+  font-size: 0.75rem;
   color: #a8b2d8;
-  margin-bottom: 6px;
-}
-
-.input-group input {
-  width: 100%;
-  padding: 12px 14px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 10px;
-  color: #eee;
-  font-size: 1rem;
-  outline: none;
-  transition: border-color 0.2s;
-}
-
-.input-group input:focus {
-  border-color: #e94560;
-}
-
-.input-group input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-  cursor: pointer;
-}
-
-/* Buttons */
-.btn-primary {
-  width: 100%;
-  padding: 13px;
-  background: #e94560;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
   margin-top: 4px;
+  letter-spacing: 1px;
 }
 
-.btn-primary:hover {
-  background: #c73652;
+.colon {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  color: #a8b2d8;
+  font-weight: 700;
+  padding-bottom: 16px;
 }
 
-.btn-primary:active {
-  transform: scale(0.98);
-}
-
-/* D-Day List */
-.dday-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.empty-msg {
-  text-align: center;
-  color: #556;
-  font-size: 0.9rem;
-  padding: 20px 0;
-}
-
-.dday-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 16px 18px;
-  transition: transform 0.15s;
-}
-
-.dday-card:hover {
-  transform: translateY(-2px);
-}
-
-.dday-card.today {
-  border-color: #e9c846;
-  box-shadow: 0 0 12px rgba(233, 200, 70, 0.2);
-}
-
-.dday-card.past {
-  opacity: 0.5;
-}
-
-.card-info {
-  flex: 1;
-}
-
-.card-name {
+.exam-date {
   font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.card-date {
-  font-size: 0.8rem;
   color: #a8b2d8;
+  letter-spacing: 1px;
 }
 
-.card-dday {
-  font-size: 1.6rem;
-  font-weight: 800;
-  min-width: 90px;
-  text-align: right;
-}
-
-.card-dday.future { color: #e94560; }
-.card-dday.today-label { color: #e9c846; }
-.card-dday.past-label { color: #556; }
-
-.delete-btn {
-  background: none;
-  border: none;
-  color: #556;
-  font-size: 1.2rem;
-  cursor: pointer;
-  margin-left: 14px;
-  padding: 4px;
-  transition: color 0.2s;
-}
-
-.delete-btn:hover {
-  color: #e94560;
-}
-
-/* Preset */
-.preset-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.preset-btn {
-  padding: 9px 16px;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-  color: #ccd;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
-}
-
-.preset-btn:hover {
-  background: rgba(233, 69, 96, 0.2);
-  border-color: #e94560;
-  color: #fff;
-}
-
-/* Footer */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  padding: 12px;
-  background: rgba(15, 52, 96, 0.9);
-  backdrop-filter: blur(10px);
-  font-size: 0.85rem;
-  color: #a8b2d8;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* Responsive */
 @media (max-width: 480px) {
-  header h1 { font-size: 1.5rem; }
-  .card-dday { font-size: 1.3rem; min-width: 70px; }
+  .timer { gap: 6px; }
+  .time-block { min-width: 64px; padding: 12px 10px; }
+  .colon { font-size: 1.2rem; }
 }
